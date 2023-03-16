@@ -1,0 +1,33 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --mode dev",
+    "test": "nuxt dev --mode test",
+    "uat": "nuxt dev --mode uat",
+    "pre": "nuxt dev --mode pre",
+    "prd": "nuxt dev --mode prd",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "unplugin-auto-import": "^0.12.1",
+    "unplugin-icons": "^0.14.15",
+    "unplugin-vue-components": "^0.22.12"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@amap/amap-jsapi-types": "^0.0.10",
+    "autoprefixer": "^10.4.13",
+    "element-plus": "^2.2.27",
+    "postcss": "^8.4.21",
+    "postcss-pxtorem": "^6.0.0",
+    "tslint": "^6.1.3",
+    "vite-plugin-qiankun": "^1.0.15",
+    "vue-dompurify-html": "^3.1.2"
+  }
+}

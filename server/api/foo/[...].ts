@@ -1,0 +1,1 @@
+export default defineEventHandler(() => `default api handle`)

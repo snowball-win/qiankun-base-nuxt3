@@ -1,0 +1,64 @@
+@charset "utf-8";
+@use "sass:math";
+$minWitdh:200px;
+$BaseColor:#666;
+$LinkColor:#06f;
+$HoverColor:#f60;
+$FontSize:19px;
+
+body,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,pre,form,fieldset,legend,input,textarea,p,blockquote,table,th,td,menu{margin:0;padding:0};
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
+ul,ol,menu{list-style:none}
+fieldset,img{border:none}
+img,object,select,input,textarea,button{vertical-align:middle}
+input,textarea,select,address,caption,cite,code,dfn,em,i,b,strong,small,th,var,abbr{font-size:100%;font-style:normal}
+caption,th {text-align: left;}
+article,aside,footer,header,hgroup,nav,section,figure,figcaption {display: block;}
+code, kbd, pre, samp, tt { font-family: Consolas,"Courier New", Courier, monospace;}
+address, cite, dfn, em, var,i {font-style: normal;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content:"";content: none;}
+a { 
+    color:$LinkColor; text-decoration:none;cursor: pointer;
+    &:link,&:visited, &:active{color: $LinkColor;}
+    &:hover, &:focus {color:$HoverColor; text-decoration:underline;outline:none;}
+    &,span,i,em,u,strong,b,p,img,ul,li,div,dd,dt,dl,ol,table,th,td,h1,h2,h3,h4,h5,h6,input,textarea,button,small,select {
+        cursor: pointer;}
+}
+
+abbr[title], acronym[title] {border-bottom: 1px dotted;cursor: help;}
+
+html {min-width:$minWitdh;overflow-y: scroll;}
+body {font-size: $FontSize;color: $BaseColor;line-height: 2;}
+body,button, input, select, textarea {font-family:tahoma,Helvetica, Arial,"\5FAE\8F6F\96C5\9ED1";}
+
+h1 {font-size: $FontSize+10;}
+h2 {font-size: $FontSize+8;}
+h3 {font-size: $FontSize+6;}
+h4 {font-size: $FontSize+4;}
+h5 {font-size: $FontSize+2;}
+h6 {font-size: $FontSize;}
+
+hr {border: none;height: 1px;background: lighten($BaseColor,50%);}
+
+.fl {float: left;}
+.fr {float: right;}
+.tl {text-align: left;}
+.tr {text-align: right;}
+.tc {text-align: center;}
+
+.cf:before, .cf:after,.web:before, .web:after,.web_:before, .web_:after {content:"";display:table;}
+.cf:after,.web:after,.web_:after {clear:both;}
+.cf {zoom:1;}
+
+.web {width: $minWitdh;margin-left: auto;margin-right: auto;zoom:1;}
+.web_ {min-width:$minWitdh;width: 100%;zoom: 1;}
+
+.block {display: block;}
+.none {display:none}
+.clear {clear: both; }
+
+@function px2rem($px) {
+    @return math.div($px, $fontSize) * 1rem;
+}
+  

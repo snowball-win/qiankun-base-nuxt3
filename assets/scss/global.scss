@@ -1,0 +1,9 @@
+@use "sass:math";
+@import 'reset';
+
+// 这个值在媒体查询里边动态设置，但是不是很流畅，有待探索
+$fontSize: 37.5;
+
+@function px2rem($px) {
+  @return math.div($px, $fontSize) * 1rem;
+}
